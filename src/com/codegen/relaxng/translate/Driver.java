@@ -31,13 +31,13 @@ import java.util.List;
 import java.util.Vector;
 
 public class Driver {
-  static private final Localizer localizer = new Localizer(Driver.class);
-  private String inputType;
-  private String outputType;
-  private final ErrorHandlerImpl eh = new ErrorHandlerImpl();
-  private static final String DEFAULT_OUTPUT_ENCODING = "UTF-8";
-  private static final int DEFAULT_LINE_LENGTH = 72;
-  private static final int DEFAULT_INDENT = 2;
+  static public final Localizer localizer = new Localizer(Driver.class);
+  public String inputType;
+  public String outputType;
+  public final ErrorHandlerImpl eh = new ErrorHandlerImpl();
+  public static final String DEFAULT_OUTPUT_ENCODING = "UTF-8";
+  public static final int DEFAULT_LINE_LENGTH = 72;
+  public static final int DEFAULT_INDENT = 2;
 
   static public void main(String[] args) {
 	  
@@ -51,7 +51,7 @@ public class Driver {
     System.exit(new Driver().doMain(args));
   }
 
-  private int doMain(String[] args) {
+  public int doMain(String[] args) {
     List inputParams = new Vector();
     List outputParams = new Vector();
     try {
@@ -166,11 +166,11 @@ public class Driver {
     return 1;
   }
 
-  private void error(String message) {
+  public void error(String message) {
     eh.printException(new SAXException(message));
   }
 
-  static private String extension(String s) {
+  static public String extension(String s) {
     int dot = s.lastIndexOf(".");
     if (dot < 0)
       return "";
