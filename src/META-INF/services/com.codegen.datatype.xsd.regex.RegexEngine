@@ -1,0 +1,3 @@
+com.codegen.datatype.xsd.regex.jdk1_4.RegexEngineImpl
+com.codegen.datatype.xsd.regex.xerces2.RegexEngineImpl
+com.codegen.datatype.xsd.regex.xerces.RegexEngineImpl
